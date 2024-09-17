@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106116_MarshaAuliaFakhriza_C2'24_Posttest2"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-17 02:14:38 AM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtU1NJT1VQMk87MjAyNC0wOS0xNzswMTowMjozOSBBTTsyNzA2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtU1NJT1VQMk87MjAyNC0wOS0xNzswMjoxNDozOCBBTTsyOzI4MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, nim" type="String" array="False" size=""/>
+            <declare name="HargaSetiapMobil" type="Integer" array="False" size=""/>
+            <declare name="Diskon" type="String" array="False" size=""/>
+            <declare name="DiskonTesla, DiskonToyota, DiskonHyundai" type="Real" array="False" size=""/>
+            <declare name="HargaTesla, HargaToyota, HargaHyundai" type="Real" array="False" size=""/>
+            <declare name="modulus7" type="Real" array="False" size=""/>
+            <input variable="nama"/>
+            <input variable="nim"/>
+            <input variable="HargaSetiapMobil"/>
+            <assign variable="DiskonTesla" expression="(HargaSetiapMobil)*0.17"/>
+            <assign variable="DiskonToyota" expression="(HargaSetiapMobil)*0.21"/>
+            <assign variable="DiskonHyundai" expression="(HargaSetiapMobil)*0.23"/>
+            <assign variable="HargaTesla" expression="HargaSetiapMobil-DiskonTesla"/>
+            <assign variable="HargaToyota" expression="HargaSetiapMobil-DiskonToyota"/>
+            <assign variable="HargaHyundai" expression="HargaSetiapMobil-DiskonHyundai"/>
+            <assign variable="modulus7" expression="HargaSetiapMobil%7"/>
+            <output expression="DiskonTesla" newline="True"/>
+            <output expression="DiskonToyota" newline="True"/>
+            <output expression="DiskonHyundai" newline="True"/>
+            <output expression="HargaTesla" newline="True"/>
+            <output expression="HargaToyota" newline="True"/>
+            <output expression="HargaHyundai" newline="True"/>
+            <output expression="modulus7" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
